@@ -1,0 +1,309 @@
+.header {
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; /* Adjust text color */
+  background-color: #2b2b2b; /* Dark background color */
+}
+
+
+* {
+    outline: none;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    min-height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #bdb9f7;
+  }
+  
+  .tb {
+    display: table;
+    width: 100%;
+  }
+  
+  .td {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  input,
+  button {
+    color: #fff;
+    font-family: Nunito;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+  }
+  
+  #cover {
+    position: absolute;
+    top: 51.5%; /* Adjusted top value */
+    left: 0;
+    right: 0;
+    width: 550px;
+    padding: 35px;
+    margin: -83px auto 0 auto;
+    background-color: #ff7575;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+    transform: scale(0.6);
+  }
+  
+  form {
+    height: 96px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    height: 96px;
+    font-size: 60px;
+    line-height: 1;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #e16868;
+  }
+  
+  #s-cover {
+    width: 1px;
+    padding-left: 35px;
+  }
+  
+  button {
+    position: relative;
+    display: block;
+    width: 84px;
+    height: 96px;
+    cursor: pointer;
+  }
+  
+  #s-circle {
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 43px;
+    height: 43px;
+    margin-top: 0;
+    border-width: 15px;
+    border: 15px solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+  }
+  
+  button span {
+    position: absolute;
+    top: 68px;
+    left: 43px;
+    display: block;
+    width: 45px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+  }
+  
+  button span:before,
+  button span:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+  }
+  
+  #s-cover:hover #s-circle {
+    top: -1px;
+    width: 67px;
+    height: 15px;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  
+  #s-cover:hover span {
+    top: 50%;
+    left: 56px;
+    width: 25px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+  }
+  
+  #s-cover:hover button span:before {
+    bottom: 11px;
+    transform: rotateZ(52deg);
+  }
+  
+  #s-cover:hover button span:after {
+    bottom: -11px;
+    transform: rotateZ(-52deg);
+  }
+  #s-cover:hover button span:before,
+  #s-cover:hover button span:after {
+    right: -6px;
+    width: 40px;
+    background-color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+
+  .champion-box {
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .champion-image {
+    max-width: 100px; /* Adjust the width as needed */
+    max-height: 100px; /* Adjust the height as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+  .champion-name {
+    font-weight: bold;
+  }
+
+  .header {
+    width: 100%;
+    padding: 30px 0; /* Reduced padding for the header */
+    text-align: center;
+    background-color: #2b2b2b;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .summoner-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .summoner-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .summoner-details {
+    text-align: left;
+    color: white;
+  }
+  
+  .summoner-name {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .summoner-level {
+    font-size: 20px;
+  }
+
+/* Style for mastery points */
+.mastery-points {
+    font-weight: bold;
+    font-size: 28px;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+.mastery-level {
+  font-weight: bold;
+}
+
+
+.return-button {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+  background-color: #141414; /* Dark background color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #444; /* Darker background color on hover */
+}
+
+.solo-tier {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff7575;
+  padding: 5px 15px; /* Increase the padding on the sides for more spacing */
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 30px; /* Add margin to push it to the right */
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Add a smooth transition on background color change */
+}
+.solo-tier:hover {
+  background-color: #f96262; /* Change the background color on hover */
+}
+
+.flex-tier {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff7575;
+  padding: 5px 15px; /* Increase the padding on the sides for more spacing */
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 30px; /* Add margin to push it to the right */
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Add a smooth transition on background color change */
+}
+.flex-tier:hover {
+  background-color: #f96262; /* Change the background color on hover */
+}
+
+.ranked-tier-logo {
+  max-width: 150px; /* Adjust the width as needed */
+  max-height: 150px; /* Adjust the height as needed */
+  margin-top: 0px; /* Adjust spacing */
+  margin-left: 45px; /* Add margin to push it to the right */
+  display: block;
+
+}
+
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

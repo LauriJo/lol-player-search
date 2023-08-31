@@ -1,0 +1,50 @@
+<body>
+<div class="header">
+  <div class="header-content">
+    <a class="return-button" href="/search">Return to Search Page</a>
+<div class="summoner-info">
+  <img class="summoner-icon" src="{{ getSummonerIconUrl summonerData.profileIconId }}" alt="Summoner Icon">
+  <div class="summoner-details">
+    <p class="summoner-name">{{ summonerData.name }}</p>
+    <p class="summoner-level">Level {{ summonerData.summonerLevel }}</p>
+  </div>
+{{#each summonerEntries}}
+  {{#if_eq queueType "RANKED_SOLO_5x5"}}
+    <div class="ranked-tier-container">
+      <p class="solo-tier">Solo duo rank:<br>
+        {{ tier }} {{ rank }}</p>
+      <img class="ranked-tier-logo" src="{{ soloRankedLogo tier }}" alt="Ranked Tier Logo">
+      <p>W {{wins}} - L {{losses}}</p>
+      <p>                         </p>
+    </div>
+  {{/if_eq}}
+{{/each}}
+{{#each summonerEntries}}
+  {{#if_eq queueType "RANKED_FLEX_SR"}}
+    <div class="ranked-tier-container">
+      <p class="flex-tier">Flex rank:<br>
+        {{ tier }} {{ rank }}</p>
+      <img class="ranked-tier-logo" src="{{ soloRankedLogo tier }}" alt="Ranked Tier Logo">
+      <p>W {{wins}} - L {{losses}}</p>
+    </div>
+  {{/if_eq}}
+{{/each}}
+</div>
+</div>
+</div>
+
+    <h1>Most played champions</h1>
+    <div class="champion-container">
+        {{#each masteryData}}
+            <div class="champion-box">
+                <div class="champion-image-container">
+                    <img class="champion-image" src="{{ this.imageURL }}" alt="{{ this.championName }}">
+                </div>
+                <p class="champion-name">{{ this.championName }}</p>
+                <p class="mastery-level">Mastery level: {{ this.championLevel }}</p>
+                <img class="mastery-level-logo" src="{{ masteryLevelLogo this.championLevel }}" alt="Mastery Level {{ this.championLevel }} Logo">
+                <p class="mastery-points">Mastery points: {{ formatNumber this.championPoints }}</p>
+            </div>
+        {{/each}}
+    </div>
+</body>
